@@ -1,9 +1,11 @@
-const id = (pokeData, id) => {
-    if (pokeData.find(element => element.id === id)) {
-        return pokeData.find(element => element.id === id);
-      } else {
-        return {};
-      }
-}
-module.exports = id;
 
+const id = (pokeData, id) => {
+
+  let newpokeData =pokeData.filter(data => data.id === id);
+  if(newpokeData.length !== 0) {
+      return newpokeData[0];
+  }else {
+      return {};
+  }
+
+}
